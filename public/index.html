@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Spring 2018 Term Project for SPU22: Unveiling Planetary Motion">
+    <meta name="author" content="jackrzhang">
+
+    <title>Unveiling Planetary Motion</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+
+    <h1 class="title-text">Unveiling Planetary Motion</h1>
+    <h2 class="subtitle-text">Jack Zhang -- SPU 22 -- Spring 2018 Term Project</h2>
+    <h2 class="subtitle-text source-code-link"><a href="https://github.com/jackrzhang/spu22-term-project.git" target="_blank">See source code</a></h2>
+
+    <p class="small-text">How did scientists of the past perceive the movement of objects in the sky? In our modern time, it is difficult to imagine how people approached various interpretations of celestial movements. What did past scientists think moved in the sky, and what did not? What patterns did they recognize? How did they abstract these patterns into models of our universe? Beginning with Aristotle, progressing through modifications made by Hipparchus & Apollonius, Ptolemy, Copernicus, and ending with Johannes Kepler, our understanding of the structure of our solar system is a heritage of scientific investigation. These scientists, over the course of nearly two millenia, pieced together our current understanding of planetary motion. This website is a timeline, visualizing the conception of human models of planetary motion.</p>
+
+    <div class="spacer"></div>
+
+    <p class="medium-text">Aristotle (384 - 322 BCE)</p>
+
+    <div class="timeline-block">
+        <p class="small-text"><b>Aristotle</b> believed in a <b>geocentric universe</b> with orbits of perfect circles. His model of the universe made a number of basic assumptions: (1) The stars, sun, and moon were each attached to their own crystalline spheres which rotated at different velocities, (2) The angular velocity was constant for any given sphere, and (3) Earth was a spherical entity, fixed in location at the center of the universe.
+
+        <!-- geocentrism -->
+        <div id="aristotle" class="visualization">
+            <div class="concentric-circle circle-1"></div>
+            <div class="concentric-circle circle-2"></div>
+            <div class="concentric-circle circle-3"></div>
+            <div class="concentric-circle circle-4"></div>
+
+            <div class="earth"></div>
+            <div class="concentric-path path-1"><div class="moon"></div></div>
+            <div class="concentric-path path-2"><div class="sun"></div></div>
+            <div class="concentric-path path-3"><div class="grey-planet"></div></div>
+            <div class="concentric-path path-4"><div class="grey-planet"></div></div>
+        </div>
+
+        <p class="small-text">Aristotle’s cosmology was highly influenced by observations of the <b>shape of the Earth’s shadow during a lunar eclipse</b>. He pointed out that the given the shadow was always circular, the Earth had to be a sphere - later, this insight allowed Erathosthenes in 200 BC to calculate the circumference of the Earth.</p>
+    </div>
+
+    <p class="medium-text">Hipparchus & Apollonius (262 - 190, 190 - 120 BCE)</p>
+
+    <div class="timeline-block">
+        <p class="small-text">Hipparchus disagreed with Aristotle’s model of uniform concentric motion. He realized that, because the speed of the sun in the sky changed throughout the year, the sun did not move at a constant angular velocity. To account for the <b>seasons</b>, Hipparchus updated Aristotle’s model by offsetting the earth from the center of the planet’s orbit.</p>
+
+        <!-- offset earth -->
+        <div id="hipparchus" class="visualization">
+            <div class="black-dot"></div>
+            <div class="earth"></div>
+
+            <div class="concentric-circle circle-1"></div>
+            <div class="concentric-path path-1"><div class="sun"></div></div>
+        </div>
+
+        <p class="small-text">The geocentric model also did not provide an explanation for why planets would appear brighter or darker at different times or <b>retrograde motion</b>, the frequent stopping and reversal of movement of planets from the perspective of the Earth.</p>
+
+        <p class="small-text">If the planets were constantly the same distance from Earth under a geocentric model, then retrograde motion would have been impossible. To account for this, Apollonius conceived of <b>epicycles</b> — literally meaning circle moving on another circle — for his model of planetary motion.</p>
+
+        <!-- epicycle -->
+        <div id="apollonius" class="visualization">
+            <div class="black-dot"></div>
+            <div class="earth"></div>
+
+            <div class="concentric-circle circle-1"></div>
+            <div class="concentric-path path-1">
+                <div class="epicycle-circle">
+                    <div class="grey-planet"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <p class="medium-text">Ptolemy (90 - 160 AD)</p>
+
+    <div class="timeline-block">
+        <p class="small-text">Ptolemy updated the geocentric model with the <b>equant</b> - that is: while the Earth remained offset from the center of the universe, the center of the epicycles for each planet were conceived to move with constant angular velocity with respect to the equant point.</p>
+
+        <p class="small-text">His model required observations to calculate values for these 7 parameters: (1) Direction of large circle’s center from earth’s center, (2) Ratio of offset or large circle’s center from the earth’s center to the radius of the large circle, (3) Ratio of the epicycle’s radius to the large circle’s radius, (4) Angular velocity of the center of the epicycle, (5) Angular velocity of the planet on the epicycle, (6) Position of the center of the epicycle viewed from the equant, (7) Position on the planet of the epicycle, viewed from the planet, and of the planet on an epicycle.</p>
+
+        <!-- equant -->
+        <div id="ptolemy" class="visualization">
+            <div class="black-dot"></div>
+            <div class="earth"></div>
+            <div class="equant"></div>
+
+            <div class="concentric-circle circle-1"></div>
+            <div class="concentric-path path-1">
+                <div class="epicycle-circle">
+                    <div class="grey-planet"></div>
+                </div>
+            </div>
+        </div>
+
+        <p class="small-text">This model greatly improved predictions, particularly for observed changes in velocity in planetary orbit during different stages of the orbit. However, many pecularities surrounding retrograde motion still remained unexplained.</p>
+
+        <p class="small-text">Ptolemy wrote “Syntaxis”, which contained prescriptions for planetary motion. Later known as the Algamest, it was a summary of all that was known about astronomy at the time, and held influence for over the next 1500 years.</p>
+    </div>
+
+    <p class="medium-text">Copernicus (1473 - 1543)</p>
+
+    <div class="timeline-block">
+        <p class="small-text">Copernicus developed a <b>heliocentric model</b> in which it was no longer the Earth but the sun that occupied the center of the universe. The issue of retrograde motion was resolved not through the manipulation of epicycles and equants, but as an effect due to the vantage point of the Earth.</p>
+
+        <!-- heliocentrism -->
+        <div id="copernicus" class="visualization">
+            <div class="concentric-circle circle-1"></div>
+            <div class="concentric-circle circle-2"></div>
+            <div class="concentric-circle circle-3"></div>
+            <div class="concentric-circle circle-4"></div>
+
+            <div class="sun"></div>
+            <div class="concentric-path path-1"><div class="pink-planet"></div></div>
+            <div class="concentric-path path-2"><div class="earth"></div></div>
+            <div class="concentric-path path-3"><div class="grey-planet"></div></div>
+            <div class="concentric-path path-4"><div class="grey-planet"></div></div>
+        </div>
+
+        <p class="small-text">It was advantageous to Ptolemy’s model because it made fewer assumptions, and therefore explained retrograde motion in a more natural manner.</p>
+    </div>
+
+    <p class="medium-text">Tycho Brahe (1546 - 1601)</p>
+
+    <div class="timeline-block">
+        <p class="small-text">Brahe developed a model in which the sun and moon orbited the Earth and the planets orbited the sun. While his model was not accurate, Brahe also established a state of observatory and recorded numerous measurements of the planets which would be utilized by Kepler, the successor he hired.</p>
+    </div>
+
+    <p class="medium-text">Johannes Kepler (1571 - 1630)</p>
+
+    <div class="timeline-block">
+        <p class="small-text">Johannes Kepler inherited Tycho Brahe’s data and developed his famous three laws of planetary motion:</p>
+        <p class="small-text">(1) An <b>ellipse</b> is defined as all points surrounding two focal points, where the sum of each point’s distances from the two foci is constant. <b>The orbit of every planet is an ellipse with the Sun at one of the two foci.</b></p>
+        <p class="small-text">(2) <b>Law of Equal Areas</b>: a radius vector joining any planet to the Sun sweeps out equal areas in equal lengths of time.</p>
+        <p class="small-text">(3) <b>Harmonic Law</b>: The square of the orbital period of a planet is proportional to the cube of the semi-major axis of its orbit.</p>
+
+        <p class="small-text">Given that most planetary orbits are mostly circular, Kepler would not have been able to deduce his first law without the precise astronomical observations accumulated by Brahe.</p>
+
+        <p class="small-text">The peculiar orbit of Mars, which could not have been reconciled to a circular orbit, indicated an elliptical orbit to Kepler. The constant area of the second law factored in variances in the orbital radius and angular velocity of a planet over the course of the planet's orbital period. The third law, capturing the relationship between the distance of planets from the Sun and their orbital periods, was in 1619 attempted to be expressed by Kepler in terms of musical notation. Kepler referred to this as the “music of the spheres”; thus the name <i>harmonic law</i> came about.</p>
+
+        <p class="small-text">Kepler’s work improved the heliocentric theory presented by Copernicus, providing an explanation for how planets’ speed varied. In 1687, Isaac Newton would show that relationships like Kepler’s would apply in the Solar System to good approximation.</p>
+    </div>
+
+    <div class="spacer"></div><div class="spacer"></div><div class="spacer"></div>
+
+    <p class="small-text">Through science - the amazing processes through which humans have learned about the nature of the universe - we have inherited our understanding of planetary motion today. In a relatively short time, we have learned much about the nature of the universe. Perhaps peculiarly, however, it seems that for every puzzle we explore and understand, an ever deeper puzzle awaits.</p>
+
+    </div>
+</p>
+
+    <script src="index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,429 @@
+@import url('https://fonts.googleapis.com/css?family=Unna');
+
+body {
+  padding: 50px;
+  background-color: white;
+  color: black;
+  font-family: 'Unna', sans-serif;
+}
+
+a {
+  color: rgb(150, 150, 150);
+  text-decoration: none;
+}
+
+.spacer {
+  height: 10px;
+}
+
+.wrapper {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.timeline-block {
+  margin: 10px 0 0 15px;
+  padding: 20px 0 10px 30px;
+  border-left: 5px dotted black;
+}
+
+.title-text {
+  margin: 0;
+  font-size: 35px;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.subtitle-text {
+  margin: 10px 0;
+  font-size: 15px;
+  text-align: center;
+}
+
+.source-code-link {
+  margin: 10px 0 40px 0;
+}
+
+.small-text {
+  margin: 0 0 20px 0;
+  line-height: 22px;
+  font-size: 18px;
+}
+
+.medium-text {
+  margin: 15px 0;
+  font-size: 25px;
+}
+
+/* Visualization Generics */
+
+.visualization {
+  /*border: 1px solid rgb(100, 100, 100);*/
+  margin: 20px auto 35px;
+  width: 400px;
+  height: 400px;
+  position: relative;
+}
+
+.black-dot {
+  width: 9px;
+  height: 9px;
+  transform: translate(-50%, -50%);
+  background-color: black;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.sun {
+  width: 40px;
+  height: 40px;
+  background-color: #FFE165;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+
+.moon {
+  width: 12px;
+  height: 12px;
+  background-color: rgb(150,150,150);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+
+.grey-planet {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: rgb(220, 220, 220);
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+
+.pink-planet {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: #EBC6FF;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+
+.earth {
+  width: 24px;
+  height: 24px;
+  background-color: rgb(174,206,207);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+
+.concentric-circle {
+  position: absolute;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0,0,0,0);
+}
+
+.concentric-path {
+  position: absolute;
+  border-radius: 50%;
+  /*transform: translate(-50%, -50%);*/
+  background-color: rgba(0,0,0,0);
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-name: orbit;
+}
+
+.epicycle-circle {
+  position: absolute;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0,0,0,0);
+  border: 1px solid rgb(210, 210, 210);
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-name: orbit;
+}
+
+@-webkit-keyframes orbit { 
+  from {
+    transform:rotate(0deg)
+  } 
+  to {
+    transform:rotate(360deg)
+  }
+}
+
+
+/* Aristotle - Geocentrism */
+
+#aristotle .earth {
+  top: 50%;
+  left: 50%;
+}
+
+#aristotle .sun {
+  top: 0;
+  left: 0;
+}
+
+#aristotle .path-1 {
+  animation-duration: 9s;
+  position: absolute;
+  top: 167.5px;
+  left: 167.5px;
+  width: 63.6px;
+  height: 63.6px;
+}
+
+#aristotle .path-2 {
+  animation-duration: 18s;
+  position: absolute;
+  top: 135.5px;
+  left: 135.5px;
+  width: 126.5px;
+  height: 126.5px;
+}
+
+#aristotle .path-3 {
+  animation-duration: 30s;
+  position: absolute;
+  top: 104.5px;
+  left: 104.5px;
+  width: 190.9px;
+  height: 190.9px;
+}
+
+#aristotle .path-4 {
+  animation-duration: 20s;
+  position: absolute;
+  top: 73px;
+  left: 73px;
+  width: 254.5px;
+  height: 254.5px;
+}
+
+#aristotle .circle-1 {
+  border: 1px solid rgb(200, 200, 200);
+  width: 90px;
+  height: 90px;
+}
+
+#aristotle .circle-2 {
+  border: 1px solid rgb(210, 210, 210);
+  width: 180px;
+  height: 180px;
+}
+
+#aristotle .circle-3 {
+  border: 1px solid rgb(220, 220, 220);
+  width: 270px;
+  height: 270px;
+}
+
+#aristotle .circle-4 {
+  border: 1px solid rgb(230, 230, 230);
+  width: 360px;
+  height: 360px;
+}
+
+
+/* Hipparchus - Offset Earth */
+
+#hipparchus {
+  margin: -15px auto 0;
+}
+
+#hipparchus .black-dot {
+  top: 50%;
+  left: 50%;
+}
+
+#hipparchus .earth {
+  top: 40%;
+  left: 50%;
+}
+
+#hipparchus .circle-1 {
+  border: 1px solid rgb(210, 210, 210);
+  width: 270px;
+  height: 270px;
+}
+
+#hipparchus .path-1 {
+  animation-duration: 25s;
+  position: absolute;
+  top: 104.5px;
+  left: 104.5px;
+  width: 190.9px;
+  height: 190.9px;
+}
+
+
+/* Apollonius - Epicycle */
+
+#apollonius {
+  margin: 0 auto
+}
+
+#apollonius .black-dot {
+  top: 50%;
+  left: 50%;
+}
+
+#apollonius .earth {
+  top: 40%;
+  left: 50%;
+}
+
+#apollonius .circle-1 {
+  border: 1px solid rgb(210, 210, 210);
+  width: 270px;
+  height: 270px;
+}
+
+#apollonius .path-1 {
+  animation-duration: 18s;
+  position: absolute;
+  top: 104.5px;
+  left: 104.5px;
+  width: 190.9px;
+  height: 190.9px;
+}
+
+#apollonius .epicycle-circle {
+  animation-duration: 10s;
+  width: 65px;
+  height: 65px;
+  top: -58px;
+}
+
+#apollonius .grey-planet {
+  top: 38px;
+}
+
+
+/* Ptolemy - Equant */
+
+#ptolemy {
+  margin: 0 auto
+}
+
+#ptolemy .black-dot {
+  top: 50%;
+  left: 50%;
+}
+
+#ptolemy .earth {
+  top: 40%;
+  left: 50%;
+}
+
+#ptolemy .equant {
+  width: 20px;
+  height: 20px;
+  background-color: black;
+  border-radius: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 60%;
+  left: 50%;
+}
+
+#ptolemy .circle-1 {
+  border: 1px solid rgb(210, 210, 210);
+  width: 270px;
+  height: 270px;
+}
+
+#ptolemy .path-1 {
+  animation-duration: 18s;
+  position: absolute;
+  top: 104.5px;
+  left: 104.5px;
+  width: 190.9px;
+  height: 190.9px;
+}
+
+#ptolemy .epicycle-circle {
+  animation-duration: 10s;
+  width: 65px;
+  height: 65px;
+  top: -58px;
+}
+
+#ptolemy .grey-planet {
+  top: 38px;
+}
+
+/* Copernicus - Heliocentrism */
+
+#copernicus .sun {
+  top: 50%;
+  left: 50%;
+}
+
+#copernicus .path-1 {
+  animation-duration: 9s;
+  position: absolute;
+  top: 167.5px;
+  left: 167.5px;
+  width: 63.6px;
+  height: 63.6px;
+}
+
+#copernicus .path-2 {
+  animation-duration: 18s;
+  position: absolute;
+  top: 135.5px;
+  left: 135.5px;
+  width: 126.5px;
+  height: 126.5px;
+}
+
+#copernicus .path-3 {
+  animation-duration: 30s;
+  position: absolute;
+  top: 104.5px;
+  left: 104.5px;
+  width: 190.9px;
+  height: 190.9px;
+}
+
+#copernicus .path-4 {
+  animation-duration: 20s;
+  position: absolute;
+  top: 73px;
+  left: 73px;
+  width: 254.5px;
+  height: 254.5px;
+}
+
+#copernicus .circle-1 {
+  border: 1px solid rgb(200, 200, 200);
+  width: 90px;
+  height: 90px;
+}
+
+#copernicus .circle-2 {
+  border: 1px solid rgb(210, 210, 210);
+  width: 180px;
+  height: 180px;
+}
+
+#copernicus .circle-3 {
+  border: 1px solid rgb(220, 220, 220);
+  width: 270px;
+  height: 270px;
+}
+
+#copernicus .circle-4 {
+  border: 1px solid rgb(230, 230, 230);
+  width: 360px;
+  height: 360px;
+}
+
